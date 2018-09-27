@@ -1,14 +1,13 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Home
-  </h1>
+<div fxLayout fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <h1>Enter a number (N) down below and hit the button to create a pool of numbers of the size N.</h1>
 </div>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Enter a number" [(ngModel)]="poolSize" name="poolSize">
-  </mat-form-field>
-  <div class="button-row">
-    <button mat-raised-button color="primary" (click)="createPool()">Create Pool</button>
-  </div>
-</form>
+<div fxLayout fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <form class="n-form">
+    <mat-form-field class="n-full-width">
+      <input matInput placeholder="Enter a number" [(ngModel)]="poolSize" name="poolSize">
+    </mat-form-field>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="createPool()">Create Pool</button>
+    </div>
+  </form>
+</div>

@@ -1,2 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.bold {
+  font-weight: bold;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  margin: 0;
+}
+#header {
+  margin-top: 50px;
+}
+#main {
+  display: flex;
+  flex: 1;
+}
+#main > #gutter {
+  flex: 0 0 20vw;
+}
+#main > #content {
+  flex: 1;
+}
+.pool .mat-list .mat-list-item .mat-list-item-content {
+  justify-content: center;
+}

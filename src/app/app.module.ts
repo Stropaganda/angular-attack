@@ -1,8 +1,15 @@
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { NgModule } from "@angular/core";
-import { MatButtonModule, MatInputModule } from "@angular/material";
+import {
+  MatButtonModule,
+  MatInputModule,
+  MatListModule,
+  MatGridListModule,
+  MatCardModule
+} from "@angular/material";
 import { RouterModule, Routes } from "@angular/router";
 import { FormsModule } from "@angular/forms";
+import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { AppComponent } from "./app.component";
 import { HomeComponent } from "./home/home.component";
@@ -28,9 +35,21 @@ const routes: Routes = [
     RouterModule.forRoot(routes, { enableTracing: true }),
     MatButtonModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatListModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatCardModule
   ],
-  exports: [MatButtonModule, MatInputModule, FormsModule],
+  exports: [
+    MatButtonModule,
+    MatInputModule,
+    FormsModule,
+    MatListModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatCardModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

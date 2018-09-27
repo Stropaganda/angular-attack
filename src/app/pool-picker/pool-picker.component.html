@@ -1,3 +1,45 @@
-<p>
-  pool-picker works!
-</p>
+<div fxLayout fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div fxFlex fxLayoutAlign="center">
+    <div></div>
+    <button mat-raised-button color="primary" (click)="takeLowest()">Take Lowest Number</button>
+  </div>
+</div>
+<div fxLayout fxLayout.xs="column" fxLayoutGap="0.5%" fxLayoutAlign="center">
+  <div fxFlex="33%" fxLayoutAlign="center">
+    <mat-card class="pool">
+      <mat-list>
+        <mat-list-item>
+          <h3>Number Pool</h3>
+        </mat-list-item>
+        <mat-list-item *ngFor="let poolItem of pool; let idx = index">
+          <div *ngIf="poolItem == true">{{ idx + 1 }}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+  <div fxFlex="33%" fxLayoutAlign="center">
+    <div class="buttons">
+      <mat-list>
+        <mat-list-item>
+          <div></div>
+        </mat-list-item>
+        <mat-list-item *ngFor="let poolItem of pool; let idx = index">
+          <button *ngIf="poolItem == true" mat-raised-button color="primary" (click)="take(idx)">Take</button>
+          <button *ngIf="poolItem != true" mat-raised-button color="warn" (click)="give(idx)">Give</button>
+        </mat-list-item>
+      </mat-list>
+    </div>
+  </div>
+  <div fxFlex="33%" fxLayoutAlign="center">
+    <mat-card class="pool">
+      <mat-list>
+        <mat-list-item>
+          <h3>User Pool</h3>
+        </mat-list-item>
+        <mat-list-item *ngFor="let poolItem of pool; let idx = index">
+          <div *ngIf="poolItem != true">{{ idx + 1 }}</div>
+        </mat-list-item>
+      </mat-list>
+    </mat-card>
+  </div>
+</div>
