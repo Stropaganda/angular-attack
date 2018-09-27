@@ -1,6 +1,9 @@
 .pool {
   width: 100%;
 }
+.poolContainer {
+  margin-top: 50px;
+}
 .buttons {
   padding: 24px;
 }
